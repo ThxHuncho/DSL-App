@@ -227,7 +227,7 @@ st.subheader("Return - Volatility - Shape Ratio")
 
 d={'MKV':list(get_ret_vol_sr(opt_results.x)),'DLS':list(get_ret_vol_sr(coef))}
 df_rvs = pd.DataFrame(data=d)
-st.dataframe(df_rvs,,index=['Return','Volatility','Shape Ratio'])
+st.dataframe(df_rvs,index=['Return','Volatility','Shape Ratio'])
 
 #---------------------------------------- Backtesting_Mkv
 
