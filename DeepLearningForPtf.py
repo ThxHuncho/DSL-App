@@ -214,7 +214,7 @@ coef=model.get_allocations(df)
 #df_alloc=pd.concat(coef_M,df_coef)
 
 d={'Coef_MKV':list(opt_results.x),'Coef_DLS':list(coef)}
-df_coef = pd.DataFrame(data=d,index=crypto.columns)
+df_coef = pd.DataFrame(data=d,index=df.columns)
 st.dataframe(df_coef)
 
 
