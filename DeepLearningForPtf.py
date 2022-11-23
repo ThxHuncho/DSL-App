@@ -111,15 +111,14 @@ class Model:
         '''
         
         model = Sequential()
-        
         model.add(LSTM(100, input_shape=input_shape,return_sequences=True))
-        #model.add(LSTM(100, return_sequences=True))
-        #model.add(LSTM(100, return_sequences=True))
-        #model.add(LSTM(100, return_sequences=True))
-        model.add(LSTM(100, return_sequences=True))
-        model.add(LSTM(100, return_sequences=False))
-        model.add(Flatten()) 
-        model.add(Dense(outputs, activation='softmax')) 
+        model.add(LSTM(64, return_sequences=True))
+        model.add(LSTM(64, return_sequences=True))
+        model.add(LSTM(64, return_sequences=True))
+        model.add(LSTM(64, return_sequences=True))
+        model.add(LSTM(64, return_sequences=False))
+        model.add(Flatten())
+        model.add(Dense(outputs, activation='softmax'))
         
 
         def sharpe_loss(_, y_pred):
@@ -215,7 +214,7 @@ coef=model.get_allocations(df)
 #df_alloc=pd.concat(coef_M,df_coef)
 
 d={'Coef_MKV':list(opt_results.x),'Coef_DLS':list(coef)}
-df_coef = pd.DataFrame(data=d)
+df_coef = pd.DataFrame(data=d,index=crypto.columns)
 st.dataframe(df_coef)
 
 
@@ -228,7 +227,7 @@ st.subheader("Return - Volatility - Shape Ratio")
 
 d={'MKV':list(get_ret_vol_sr(opt_results.x)),'DLS':list(get_ret_vol_sr(coef))}
 df_rvs = pd.DataFrame(data=d)
-st.dataframe(df_rvs)
+st.dataframe(df_rvs,,index=['Return','Volatility','Shape Ratio'])
 
 #---------------------------------------- Backtesting_Mkv
 
