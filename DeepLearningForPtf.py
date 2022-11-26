@@ -29,6 +29,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+col  = st.columns(1)
+cols.subheader("Deep Learning for Portfolio Selection")
 
 st.sidebar.image('https://www.neoma-bs.fr/events/emailings/2020/05/lancement-campagne-de-communication/images/neoma_logotype_rvb.png', width=200)
 
@@ -41,7 +43,7 @@ st.sidebar.title(APP_NAME)
 st.markdown('---')
 # Sidebar Configuration
 st.sidebar.markdown('In this app the user will be able to construct his own portfolio and optimize his portfolio with deep learning methode')
-st.sidebar.markdown('This app was created by student of MSc in Finance and Big Data')
+st.sidebar.markdown('This app was created by a group of student of MSc in Finance and Big Data')
 
 
 
