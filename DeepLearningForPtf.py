@@ -49,7 +49,7 @@ st.sidebar.markdown('This app was created by a group of student of MSc in Financ
 #---------------------------------------- List of tickers
 TICKERS = [
            'MSFT','AAPL','GOOGL','ACN','IBM','JPM','BLK','WMT','AMZN', 'NKE',
-           'NDAQ','EQOP','VTI','DBC','AGG'
+           'NDAQ','VTI','DBC','AGG'
 ]
 
 #---------------------------------------- Function to load data
