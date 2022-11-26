@@ -29,7 +29,6 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
-st.columns(1).subheader("Deep Learning for Portfolio Selection")
 
 
 st.sidebar.image('https://www.neoma-bs.fr/events/emailings/2020/05/lancement-campagne-de-communication/images/neoma_logotype_rvb.png', width=200)
