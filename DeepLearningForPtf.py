@@ -73,7 +73,7 @@ symbol_selections = st.sidebar.multiselect("Select your asset", options=symbols,
 #---------------------------------------- Method
 
 st.sidebar.subheader("Backtesting period")
-start_date = st.sidebar.date_input('Start date', datetime.datetime(2010, 1, 1))
+start_date = st.sidebar.date_input('Start date', datetime.datetime(2015, 1, 1))
 end_date = st.sidebar.date_input('End date', datetime.datetime.now().date())
 
 #---------------------------------------- Data for Optimization 
