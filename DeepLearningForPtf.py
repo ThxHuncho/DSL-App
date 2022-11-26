@@ -69,7 +69,7 @@ def filter_data(symbol_selections: list[str],start_date,end_date) -> pd.DataFram
 #---------------------------------------- Select ticker
 st.sidebar.subheader("Portfolio construction")
 symbols = TICKERS
-symbol_selections = st.sidebar.multiselect("Select your asset", options=symbols, default=symbols[0:3])
+symbol_selections = st.sidebar.multiselect("Select your asset", options=symbols, default=symbols[10:])
 
 #---------------------------------------- Method
 
